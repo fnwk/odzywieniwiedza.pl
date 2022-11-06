@@ -1,0 +1,40 @@
+    <svg
+    width="87"
+    height="64"
+    viewBox="0 0 87 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#clip0_377_2)">
+      <rect
+        x="18"
+        y="50"
+        width="69"
+        height="14"
+        rx="7"
+        fill="#353535"
+        fill-opacity="0.77"
+      />
+      <rect
+        y="26"
+        width="87"
+        height="12"
+        rx="6"
+        fill="#353535"
+        fill-opacity="0.67"
+      />
+      <rect
+        x="43"
+        width="44"
+        height="14"
+        rx="7"
+        fill="#353535"
+        fill-opacity="0.47"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_377_2">
+        <rect width="87" height="64" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
