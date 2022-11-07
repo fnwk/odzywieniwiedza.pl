@@ -5,8 +5,12 @@
 </template>
 <style lang="scss" scoped>
     div{
-        position: absolute;
-        right: 5vw;
-        top: 100vh;
+        display: none;
+        @media(min-width: 900px){
+            display: block;
+            position: absolute;
+            right: 5vw;
+            top: 100vh;
+        }
     }
 </style>
