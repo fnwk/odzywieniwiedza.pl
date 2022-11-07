@@ -1,11 +1,9 @@
 <script setup>
-// const isMobileNav = ref(false);
-// const toggleMobile = () => {
-//   isMobileNav.value = !isMobileNav.value;
-// };
+const props = defineProps(['navActive'])
+
 </script>
 <template>
-  <div class="hamburger" @click="$emit('toggleNavbar')">
+  <div class="hamburger" :class="{'hamburger-active' : navActive}"  @click="$emit('toggleNavbar')" >
     <img src="/images/navbar/Burger.svg" />
   </div>
 </template>
@@ -15,6 +13,8 @@
   top: 40px;
   right: 20px;
   width: 40px;
+  transform: rotate(0deg);
+  transition: all .5s ease-in-out;
 
   img {
     width: 100%;
@@ -24,5 +24,8 @@
   @media (min-width: 900px) {
     display: none;
   }
+}
+.hamburger-active{
+  transform: skew(-10deg);
 }
 </style>

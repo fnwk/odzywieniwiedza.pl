@@ -12,7 +12,7 @@ const toggleMobileNavbar = () => {
     <MoleculesHeaderNav :links="['O Nas', 'Aktualności']" />
     <AtomsHeaderLogo />
     <MoleculesHeaderNav :links="['kupa', 'test']" />
-    <AtomsHeaderBars @toggle-navbar="toggleMobileNavbar" />
+    <AtomsHeaderBars @toggle-navbar="toggleMobileNavbar" :navActive="isMobileNav"/>
     <MoleculesHeaderDropdown
       v-if="isMobileNav"
       :links="['O Nas', 'Aktualności', 'kupa', 'test']"
@@ -22,7 +22,6 @@ const toggleMobileNavbar = () => {
 
 <style scoped lang="scss">
 header {
-  // box-sizing: border-box;
   position: fixed;
   top: 0;
   display: flex;
