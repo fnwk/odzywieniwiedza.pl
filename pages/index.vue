@@ -2,7 +2,9 @@
 
 <template>
   <OrganismsTheHeader />
-  <OrganismsWelcomeSection />
+  <OrganismsHeroSection />
+
+  <OrganismsAboutProjectSection />
 </template>
 
 <style lang="scss"></style>

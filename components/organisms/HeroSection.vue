@@ -2,21 +2,26 @@
 
 <template>
   <section>
-    <MoleculesWelcomeImagesL />
-    <AtomsWelcomeSlogan />
-    <MoleculesWelcomeImagesR />
+    <MoleculesHeroImagesL />
+    <AtomsHeroSlogan />
+    <MoleculesHeroImagesR />
   </section>
 </template>
 
 <style lang="scss" scoped>
 section {
+  margin-top: 150px;
   width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
-  padding: {
-    block: 150px;
-    inline: 10%;
+
+  @media (min-width: 900px) {
+    margin-top: 0;
+    height: 100vh;
+    padding: {
+      block: 150px;
+      inline: 10%;
+    }
   }
 
   div {

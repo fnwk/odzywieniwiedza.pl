@@ -2,12 +2,9 @@
 
 <template>
   <div>
-    <img
-      class="illustration stripes"
-      src="/images/welcome/illustrations/3.svg"
-    />
-    <img class="illustration ble" src="/images/welcome/illustrations/6.svg" />
-    <img class="illustration waves" src="/images/welcome/illustrations/4.svg" />
+    <img class="illustration stripes" src="/images/hero/illustrations/3.svg" />
+    <img class="illustration ble" src="/images/hero/illustrations/6.svg" />
+    <img class="illustration waves" src="/images/hero/illustrations/4.svg" />
   </div>
 </template>
 

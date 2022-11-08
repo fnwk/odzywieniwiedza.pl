@@ -1,12 +1,17 @@
 <script setup>
-const props = defineProps(['navActive'])
-
+const props = defineProps(['navActive']);
 </script>
+
 <template>
-  <div class="hamburger" :class="{'hamburger-active' : navActive}"  @click="$emit('toggleNavbar')" >
+  <div
+    class="hamburger"
+    :class="{ 'hamburger-active': navActive }"
+    @click="$emit('toggleNavbar')"
+  >
     <img src="/images/navbar/Burger.svg" />
   </div>
 </template>
+
 <style lang="scss" scoped>
 .hamburger {
   position: absolute;
@@ -14,7 +19,7 @@ const props = defineProps(['navActive'])
   right: 20px;
   width: 40px;
   transform: rotate(0deg);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   img {
     width: 100%;
@@ -25,7 +30,7 @@ const props = defineProps(['navActive'])
     display: none;
   }
 }
-.hamburger-active{
+.hamburger-active {
   transform: skew(-10deg);
 }
 </style>
