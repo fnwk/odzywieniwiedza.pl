@@ -1,10 +1,6 @@
-<script setup></script>
-
 <template>
   <OrganismsTheHeader />
   <OrganismsHeroSection />
-
+  <OrganismsWiseWordsSection />
   <OrganismsAboutProjectSection />
 </template>
-
-<style lang="scss"></style>
