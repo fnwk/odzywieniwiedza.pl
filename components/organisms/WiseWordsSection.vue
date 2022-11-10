@@ -1,18 +1,13 @@
 <template>
     <section>
-        <div>
-            <AtomsWiseWordsStork />
-            <AtomsWiseWordsText />
-            <AtomsWiseWordsHedgehog />
-        </div>
-            <AtomsWiseWordsIllustration />
+        <MoleculesWiseWordsMessage />
+        <AtomsWiseWordsIllustration />
     </section>
 </template>
 <style lang="scss" scoped>
 section{
-    height: 50vh;
     width: 100%;
-
+    position: relative;
     div{
         @media(min-width: 900px){
             display: flex;

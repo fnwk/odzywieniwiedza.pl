@@ -12,7 +12,7 @@ div {
     display: block;
     position: absolute;
     right: 5vw;
-    top: 100vh;
+    top: 0;
   }
 }
 </style>

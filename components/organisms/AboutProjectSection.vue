@@ -11,6 +11,7 @@
 
 <style lang="scss" scoped>
 section {
+  margin-top: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +19,7 @@ section {
 
   @media (min-width: 900px) {
     flex-direction: row;
+    margin-top: 0;
   }
 }
 </style>
