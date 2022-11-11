@@ -10,7 +10,10 @@
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
     "nuxt": "3.0.0-rc.13",
-    "sass": "^1.56.0",
-    "sass-loader": "^13.1.0"
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0"
+  },
+  "dependencies": {
+    "webpack": "^5.75.0"
   }
 }

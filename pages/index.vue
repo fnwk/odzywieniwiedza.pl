@@ -4,4 +4,5 @@
   <OrganismsWiseWordsSection />
   <OrganismsAboutProjectSection />
   <OrganismsContactSection />
+  <OrganismsTheFooter />
 </template>
