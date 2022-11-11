@@ -17,7 +17,7 @@ h1 {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 40%;
       left: 55%;
@@ -25,10 +25,10 @@ h1 {
       display: block;
       width: 250%;
       height: 250%;
-      background: {
-        image: url('@/images/aboutProject/Mark.svg');
+      /* background: {
+        image: url("/images/aboutProject/Mark.svg");
         size: 100% 100%;
-      }
+      } */
     }
   }
 
