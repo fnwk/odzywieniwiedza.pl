@@ -1,27 +1,39 @@
 <script setup>
-const emit = defineEmits(['toggleNavbar']);
+import { createDOMCompilerError } from "@vue/compiler-dom";
 
+const emit = defineEmits(["toggleNavbar"]);
+
+const scrollY = ref(0);
 const isMobileNav = ref(false);
+
+const navState = computed(() => {
+  if (scrollY.value === 0) {
+    return "default";
+  } else {
+    return "scrolled";
+  }
+});
+
+console.log(scrollY);
 
 const toggleMobileNavbar = () => {
   isMobileNav.value = !isMobileNav.value;
 };
 
-window.addEventListener('scroll', () => {
-    setScrollY(window.scrollY);
+if (process.client) {
+  window.addEventListener("scroll", () => {
+    scrollY.value = window.scrollY;
+    console.log(scrollY);
   });
-  
+}
 </script>
 <template>
-  <header>
-    <MoleculesHeaderDropdown
-      v-if="isMobileNav"
-      :links="['O Nas', 'Aktualności', 'kupa', 'test']"
-    />
+  <header :class="navState">
+    <MoleculesHeaderDropdown v-if="isMobileNav" :links="['O Nas', 'Aktualności', 'kupa', 'test']" />
     <MoleculesHeaderNav :links="['O Nas', 'Aktualności']" />
     <AtomsHeaderLogo />
     <MoleculesHeaderNav :links="['kupa', 'test']" />
-    <AtomsHeaderBars @toggle-navbar="toggleMobileNavbar" :navActive="isMobileNav"/>
+    <AtomsHeaderBars @toggle-navbar="toggleMobileNavbar" :navActive="isMobileNav" />
   </header>
 </template>
 
@@ -36,9 +48,21 @@ header {
   align-items: center;
   width: 100vw;
   max-width: 100vw;
-  padding: {
-    block: 30px;
-    inline: 10%;
+  padding-inline: 10%;
+  transition: all 0.2s ease-in-out;
+
+  &.default {
+    padding-block: 30px;
+    background: white;
+  }
+
+  &.scrolled {
+    padding-block: 5px;
+
+    img {
+      transition: all 0.6s ease-in-out;
+      width: 250px;
+    }
   }
 }
 </style>
