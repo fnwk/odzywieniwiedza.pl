@@ -13,7 +13,6 @@ div.message {
   margin: 0 5vw;
   border: variables.$black 3px solid;
   border-radius: 10px;
-  height: 28vw;
   z-index: 5;
 
   @media (min-width: 900px) {

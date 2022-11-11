@@ -57,11 +57,15 @@ header {
   }
 
   &.scrolled {
-    padding-block: 5px;
+    padding-block: 10px;
 
-    img {
-      transition: all 0.6s ease-in-out;
-      width: 250px;
+    @media (min-width: 900px) {
+      padding-block: 5px;
+
+      img {
+        transition: all 0.6s ease-in-out;
+        width: 250px;
+      }
     }
   }
 }
