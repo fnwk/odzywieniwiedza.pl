@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="images/contact/messageMenu.svg" />
+    <img src="/images/contact/messageMenu.svg" />
   </div>
 </template>
 <style lang="scss" scoped>
