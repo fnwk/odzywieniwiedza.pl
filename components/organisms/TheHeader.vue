@@ -1,16 +1,15 @@
 <script setup>
 const emit = defineEmits(['toggleNavbar']);
 
+const navState = ref('default');
 const isMobileNav = ref(false);
 
 const toggleMobileNavbar = () => {
   isMobileNav.value = !isMobileNav.value;
 };
 
-window.addEventListener('scroll', () => {
-    setScrollY(window.scrollY);
-  });
-  
+
+
 </script>
 <template>
   <header>
