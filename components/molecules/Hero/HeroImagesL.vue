@@ -2,9 +2,9 @@
 
 <template>
   <div>
-    <img class="illustration stripes" src="/images/hero/illustrations/3.svg" />
-    <img class="illustration ble" src="/images/hero/illustrations/6.svg" />
-    <img class="illustration waves" src="/images/hero/illustrations/4.svg" />
+    <AtomsUIParallaxElement class="illustration stripes"  power="0.7" src="/images/hero/illustrations/3.svg" />
+    <AtomsUIParallaxElement class="illustration ble" src="/images/hero/illustrations/6.svg" power="0.1"/>
+    <AtomsUIParallaxElement class="illustration waves" src="/images/hero/illustrations/4.svg" power="0.4"/>
   </div>
 </template>
 

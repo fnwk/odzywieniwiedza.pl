@@ -7,10 +7,11 @@
 $yellow: #FECE2F; //delete
 $black: #353535;
     div{
-        height: calc(100% - .8vw);
-        width: 15%;
+        min-width: 30%;
+        padding: 0 10px;
+        height: 30px;
         display: flex;
-        align-items: center;
+        justify-content: center;
 
         button{
            height: 100%;

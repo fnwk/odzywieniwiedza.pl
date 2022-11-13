@@ -5,14 +5,10 @@
 textarea{
     width: 100%;
     padding: 10px;
-    height: 22.5vw;
+    height: calc(100% - 85px);
     border-radius: 6px;
     border: none;
     outline: none;
     resize: none;
-
-    @media(min-width: 1300px){
-        height: 23vw;
-    }
 }
 </style>

@@ -1,5 +1,3 @@
-<script style></script>
-
 <template>
   <section>
     <MoleculesHeroImagesL />

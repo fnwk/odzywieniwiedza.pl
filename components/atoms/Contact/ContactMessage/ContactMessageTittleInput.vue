@@ -1,27 +1,32 @@
 <template>
+  <div>
     <input type="text" placeholder="Temat wiadomości..." />
+  </div>
 </template>
 <style lang="scss" scoped>
-$black: #353535;
-$yellow: #FECE2F;
+div{
+  width: 80%;
+  margin: 10px 0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+input {
+  height: 100%;
+  padding-left: 8px;
+  width: 80%;
+  color: #353535;
+  outline-color: variables.$yellow;
+  border: 3px solid variables.$black;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
 
-input{
-    color: #353535;
-    outline-color: $yellow; //TODO: change
-    width: 20vw;
-    height: calc(100% - .8vw);
-    padding: .5vw 0;
-    border: 3px solid $black;
-    border-radius: 6px;
-    transition: all 0.2s ease-in-out;
-
-    &:focus{
-        border: 3px solid $yellow;
-        height: calc(100% - .4vw);
-        padding: 0.2vw 0;
-        width: 23vw;
-        font-size: 16px;
-        padding-left: 3%;
-       }
+  &:focus {
+    width: 100%;
+    height: 110%;
+    border: 3px solid variables.$yellow;
+    padding-left: 15px;
+    font-size: 16px;
+  }
 }
 </style>

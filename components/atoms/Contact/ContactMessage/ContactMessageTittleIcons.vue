@@ -5,11 +5,16 @@
 </template>
 <style lang="scss" scoped>
     div{
-        height: 100%;
-        padding: 0.6vw;
-        img{
-            height: 100%;
+        display: none;
 
+        @media(min-width: 1100px){
+            display: block;
+            height: 100%;
+            padding: 8px;
+            img{
+                height: 100%;
+
+            }
         }
     }
 </style>
