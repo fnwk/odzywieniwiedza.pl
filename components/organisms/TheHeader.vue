@@ -22,7 +22,6 @@ const toggleMobileNavbar = () => {
 if (process.client) {
   window.addEventListener("scroll", () => {
     scrollY.value = window.scrollY;
-    console.log(scrollY);
   });
 }
 </script>

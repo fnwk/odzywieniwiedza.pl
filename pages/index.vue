@@ -4,6 +4,7 @@
   <OrganismsWiseWordsSection />
   <OrganismsAboutProjectSection />
   <OrganismsBeneficiariesSection />
+  <OrganismsAboutUs />
   <OrganismsContactSection />
   <OrganismsTheFooter />
 </template>

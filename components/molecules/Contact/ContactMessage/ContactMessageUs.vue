@@ -1,6 +1,6 @@
 <template>
   <div class="message">
-    <MoleculesContactMessageHeader />
+    <AtomsContactMessageHeader />
     <form>
       <MoleculesContactMessageTittle />
       <AtomsContactMessageTextarea />

@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 const { power } = defineProps({
   power: {
     type: Number,
@@ -17,5 +17,5 @@ if (process.client) {
 </script>
 
 <template>
-    <!-- <img :style="{transform: translateY(`${power * scrollY}px`)}"/> -->
-</template>
+    <img :style="{transform: translateY(`${power * scrollY}px`)}"/>
+</template> -->
