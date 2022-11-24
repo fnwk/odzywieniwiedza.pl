@@ -21,15 +21,18 @@ const togglePhoto = (numberOfPhoto) => {
 <style lang="scss" scoped>
 div {
   display: flex;
-
   width: 100%;
   height: auto;
   gap: 20px;
 
   @media (min-width: 900px) {
     gap: 50px;
-    height: 150px;
-    width: auto;
+    // height: 150px;
+    width: 90%;
+  }
+
+  @media (min-width: 1300px) {
+    width: 70%;
   }
 }
 </style>

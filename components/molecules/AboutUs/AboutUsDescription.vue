@@ -7,12 +7,15 @@
 <style lang="scss" scoped>
 div {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 
   @media (min-width: 900px) {
-    width: 40%;
-    margin-left: 150px;
-    margin-bottom: 0;
+    width: 50vw;
+    // margin-left: 150px;
+  }
+
+  @media (min-width: 1300px) {
+    width: 30vw;
   }
 }
 </style>
