@@ -1,5 +1,5 @@
 <script setup>
-const emit = defineEmits(["which-photo"]);
+const emit = defineEmits(['which-photo']);
 const props = defineProps({
   photoNumber: {
     type: Number,
@@ -13,43 +13,38 @@ const props = defineProps({
 
 const whichPhoto = () => {
   if (props.isBigPhoto === true) return;
-  emit("which-photo", props.photoNumber);
+  emit('which-photo', props.photoNumber);
 };
 </script>
 <template>
-  <div :class="{ 'big-photo': props.isBigPhoto }">
-    <img
-      @click="whichPhoto"
-      :src="`/images/aboutUs/photo${props.photoNumber}.png`"
-    />
-  </div>
+  <img
+    class="image"
+    @click="whichPhoto"
+    :src="`/images/aboutUs/photo${props.photoNumber}.png`"
+    :class="{ 'big-photo': props.isBigPhoto }"
+  />
+  <img src="/images/aboutUs/Rat.svg" class="rat" v-if="props.isBigPhoto" />
 </template>
 <style lang="scss" scoped>
-div {
-  width: auto;
-  position: relative;
-  border-radius: 20px;
+.rat {
+  position: absolute;
+  top: 0;
+  transform: translateY(-97%);
+  z-index: -1;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 8%;
-    background-color: variables.$yellow;
-    width: calc(100% - 3%);
-    height: calc(100% - 4%);
-    z-index: -2;
-    border-radius: 10px;
-  }
+.image {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  filter: drop-shadow(22px 22px 0px #fece2f);
+  transition: all 0.1s ease-in-out;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 
   &.big-photo {
     margin-bottom: 70px;
-    min-width: 35vw;
-  }
-
-  img {
-    width: 100%;
-    border-radius: 10px;
+    width: 50%;
+    padding-left: 5vmax;
   }
 }
 </style>

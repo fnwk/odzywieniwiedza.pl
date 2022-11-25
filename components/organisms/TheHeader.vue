@@ -1,15 +1,14 @@
 <script setup>
-
-const emit = defineEmits(["toggleNavbar"]);
+const emit = defineEmits(['toggleNavbar']);
 
 const scrollY = ref(0);
 const isMobileNav = ref(false);
 
 const navState = computed(() => {
   if (scrollY.value === 0) {
-    return "default";
+    return 'default';
   } else {
-    return "scrolled";
+    return 'scrolled';
   }
 });
 
@@ -20,18 +19,24 @@ const toggleMobileNavbar = () => {
 };
 
 if (process.client) {
-  window.addEventListener("scroll", () => {
+  window.addEventListener('scroll', () => {
     scrollY.value = window.scrollY;
   });
 }
 </script>
 <template>
   <header :class="navState">
-    <MoleculesHeaderDropdown v-if="isMobileNav" :links="['O Nas', 'Aktualności', 'kupa', 'test']" />
+    <MoleculesHeaderDropdown
+      v-if="isMobileNav"
+      :links="['O Nas', 'Aktualności', 'kupa', 'test']"
+    />
     <MoleculesHeaderNav :links="['O Nas', 'Aktualności']" />
     <AtomsHeaderLogo />
     <MoleculesHeaderNav :links="['kupa', 'test']" />
-    <AtomsHeaderBars @toggle-navbar="toggleMobileNavbar" :navActive="isMobileNav" />
+    <AtomsHeaderBars
+      @toggle-navbar="toggleMobileNavbar"
+      :navActive="isMobileNav"
+    />
   </header>
 </template>
 
@@ -48,7 +53,6 @@ header {
   max-width: 100vw;
   padding-inline: 10%;
   transition: all 0.2s ease-in-out;
-
 
   &.default {
     padding-block: 30px;

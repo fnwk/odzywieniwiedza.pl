@@ -8,12 +8,8 @@ const togglePhoto = (num) => {
 <template>
   <section>
     <div class="top-container">
-      <div>
-        <AtomsAboutUsPhoto :photo-number="photoNumber" :isBigPhoto="true" />
-      </div>
-      <div>
-        <MoleculesAboutUsDescription />
-      </div>
+      <AtomsAboutUsPhoto :photo-number="photoNumber" :isBigPhoto="true" />
+      <MoleculesAboutUsDescription />
     </div>
     <MoleculesAboutUsPhotoSmall @photo-number="togglePhoto" />
   </section>

@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <h1>Pare słów o nas</h1>
-  </div>
+  <h1>Pare słów o nas</h1>
 </template>
 <style lang="scss" scoped>
 div {
-  width: 100%;
-
   h1 {
+    margin-top: 5vmin;
     font-size: 4.9vmin;
   }
 }

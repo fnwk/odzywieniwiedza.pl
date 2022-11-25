@@ -1,17 +1,17 @@
 <template>
   <section>
-    <MoleculesHeroImagesL />
     <AtomsHeroSlogan />
-    <MoleculesHeroImagesR />
+    <MoleculesHeroImages />
   </section>
 </template>
 
 <style lang="scss" scoped>
 section {
-  margin: { 
+  position: relative;
+  margin: {
     top: 150px;
     bottom: 100px;
-  };
+  }
   width: 100%;
   display: flex;
   align-items: center;
