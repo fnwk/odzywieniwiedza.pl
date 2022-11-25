@@ -34,8 +34,8 @@ const whichPhoto = () => {
 }
 
 .image {
-  width: 100%;
   border-radius: 10px;
+  width: 33%;
   cursor: pointer;
   filter: drop-shadow(22px 22px 0px #fece2f);
   transition: all 0.1s ease-in-out;
@@ -45,6 +45,10 @@ const whichPhoto = () => {
     margin-bottom: 70px;
     width: 50%;
     padding-left: 5vmax;
+  }
+
+  @media (min-width: 900px) {
+    width: 25%;
   }
 }
 </style>

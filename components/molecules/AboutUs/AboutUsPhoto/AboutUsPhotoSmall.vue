@@ -1,8 +1,8 @@
 <script setup>
-const emit = defineEmits(["photo-number"]);
+const emit = defineEmits(['photo-number']);
 
 const togglePhoto = (numberOfPhoto) => {
-  emit("photo-number", numberOfPhoto);
+  emit('photo-number', numberOfPhoto);
   console.log(numberOfPhoto);
 };
 </script>
