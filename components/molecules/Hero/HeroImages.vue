@@ -1,7 +1,3 @@
-<script setup>
-import { KinesisContainer, KinesisElement } from 'vue-kinesis';
-</script>
-
 <template>
   <kinesis-container class="kinesis-container">
     <div class="left side">
