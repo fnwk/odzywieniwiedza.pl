@@ -8,7 +8,12 @@
 </template>
 <style lang="scss" scoped>
 p {
-  font-size: 24px;
-  width: 80%;
+  width: 100%;
+  font-size: 16px;
+
+  @media (min-width: 900px) {
+    width: 80%;
+    font-size: 24px;
+  }
 }
 </style>

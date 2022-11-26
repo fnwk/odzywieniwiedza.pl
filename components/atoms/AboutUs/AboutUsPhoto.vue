@@ -31,6 +31,11 @@ const whichPhoto = () => {
   top: 0;
   transform: translateY(-97%);
   z-index: -1;
+  display: none;
+
+  @media (min-width: 900px) {
+    display: block;
+  }
 }
 
 .image {
@@ -43,12 +48,16 @@ const whichPhoto = () => {
 
   &.big-photo {
     margin-bottom: 70px;
-    width: 50%;
+    width: 100%;
     padding-left: 5vmax;
   }
 
   @media (min-width: 900px) {
     width: 25%;
+
+    &.big-photo {
+      width: 50%;
+    }
   }
 }
 </style>

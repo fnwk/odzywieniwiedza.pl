@@ -27,13 +27,14 @@
 
 <style lang="scss" scoped>
 .kinesis-container {
+  display: none;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 75vw;
   height: 100vh;
-  display: flex;
+
   padding-top: 150px;
 
   .side {
@@ -93,6 +94,10 @@
         }
       }
     }
+  }
+
+  @media (min-width: 900px) {
+    display: flex;
   }
 }
 </style>

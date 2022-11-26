@@ -1,11 +1,10 @@
 <template>
-    <div>
-        <MoleculesAboutUsPhotoBig />
-        <MoleculesAboutUsPhotoSmall />
-    </div>
+  <div>
+    <MoleculesAboutUsPhotoSmall />
+  </div>
 </template>
 <style lang="scss" scoped>
-    div{
-        width: 60%;
-    }
+div {
+  width: 60%;
+}
 </style>
