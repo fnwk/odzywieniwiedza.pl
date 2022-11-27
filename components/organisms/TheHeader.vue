@@ -28,11 +28,11 @@ if (process.client) {
   <header :class="navState">
     <MoleculesHeaderDropdown
       v-if="isMobileNav"
-      :links="['O Nas', 'Aktualności', 'kupa', 'test']"
+      :links="['O Projekcie', 'O nas', 'Partnerzy', 'Aktualności']"
     />
-    <MoleculesHeaderNav :links="['O Nas', 'Aktualności']" />
+    <MoleculesHeaderNav :links="['O Projekcie', 'O nas']" />
     <AtomsHeaderLogo />
-    <MoleculesHeaderNav :links="['kupa', 'test']" />
+    <MoleculesHeaderNav :links="['Partnerzy', 'Aktualności']" />
     <AtomsHeaderBars
       @toggle-navbar="toggleMobileNavbar"
       :navActive="isMobileNav"
