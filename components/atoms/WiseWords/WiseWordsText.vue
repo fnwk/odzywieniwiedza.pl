@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Lowdau ad awidsd sddaiuw ihoid <span>sddajwon</span></h1>
+    <h1>Nie ma bardziej szczerej miłości niż miłość do <span>jedzenia</span></h1>
     <!-- <img src="/images/wiseWords/underline.svg" /> -->
   </div>
 </template>
@@ -11,10 +11,11 @@ div {
   width: 100%;
   text-align: center;
   font-size: 20px;
-
+  
   @media (min-width: 900px) {
     margin: 30px 0 0 -40px;
     width: auto;
+    font-size: 25px;
   }
 }
 

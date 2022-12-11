@@ -7,7 +7,7 @@
 <style scoped lang="scss">
     div.contact{
         width: 100vw;
-        padding: 0 5%;
+        padding: 0 7%;
         display: flex;
         flex-direction: column;
         text-align: center;

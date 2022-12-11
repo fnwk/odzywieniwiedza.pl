@@ -12,8 +12,8 @@ h1 {
   span {
     position: relative;
     margin: {
-      left: 20px;
-      right: 30px;
+      left: 30px;
+      right: 40px;
     }
 
     &::after {
@@ -23,7 +23,7 @@ h1 {
       left: 55%;
       transform: translate(-50%, -50%);
       display: block;
-      width: 250%;
+      width: 150%;
       height: 250%;
       background: {
         image: url("/images/aboutProject/Mark.svg");
@@ -34,7 +34,7 @@ h1 {
 
   @media (min-width: 900px) {
     font-size: 4.3vmin;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
     line-height: 2;
   }
 }
