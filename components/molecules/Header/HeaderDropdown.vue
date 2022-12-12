@@ -3,7 +3,7 @@ const props = defineProps(['links']);
 </script>
 <template>
   <ul>
-    <AtomsHeaderLink v-for="link in links" :key="link" :link="link" />
+    <AtomsHeaderLink v-for="link in links" :key="link" :link="link.link" :title="link.title" />
   </ul>
 </template>
 <style lang="scss" scoped>
