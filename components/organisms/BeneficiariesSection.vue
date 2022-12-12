@@ -7,9 +7,10 @@
 <style lang="scss" scoped>
 section {
   width: 100vw;
+  height: 35vh;
   margin: {
     top: 150px;
-    bottom: 50px;
+    bottom: 10px;
   }
 
   @media (min-width: 900px) {
