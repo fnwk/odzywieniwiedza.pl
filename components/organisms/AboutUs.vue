@@ -6,7 +6,7 @@ const togglePhoto = (num) => {
 </script>
 
 <template>
-  <section>
+  <section id="o_nas">
     <div class="top-container">
       <AtomsAboutUsPhoto :photo-number="photoNumber" :isBigPhoto="true" />
       <MoleculesAboutUsDescription />

@@ -1,10 +1,15 @@
 <script setup>
-const props = defineProps(['links']);
+const props = defineProps(["links"]);
 </script>
 
 <template>
   <ul>
-    <AtomsHeaderLink v-for="link in links" :key="link" :link="link" />
+    <AtomsHeaderLink
+      v-for="link in links"
+      :key="link"
+      :title="link.title"
+      :link="link.link"
+    />
   </ul>
 </template>
 

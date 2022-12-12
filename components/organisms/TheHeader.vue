@@ -1,38 +1,42 @@
 <script setup>
-const emit = defineEmits(['toggleNavbar']);
+const emit = defineEmits(["toggleNavbar"]);
+
+const links = [
+  { title: "O Projekcie", link: "#o_projekcie" },
+  { title: "O nas", link: "#o_nas" },
+  { title: "Partnerzy", link: "#partnerzy" },
+  { title: "Aktualności", link: "Aktualnosci" },
+];
 
 const scrollY = ref(0);
 const isMobileNav = ref(false);
 
+if (process.client) {
+  window.addEventListener("scroll", () => {
+    scrollY.value = window.scrollY;
+  });
+}
+
 const navState = computed(() => {
   if (scrollY.value === 0) {
-    return 'default';
+    return "default";
   } else {
-    return 'scrolled';
+    return "scrolled";
   }
 });
-
-console.log(scrollY);
 
 const toggleMobileNavbar = () => {
   isMobileNav.value = !isMobileNav.value;
 };
-
-if (process.client) {
-  window.addEventListener('scroll', () => {
-    scrollY.value = window.scrollY;
-  });
-}
 </script>
 <template>
   <header :class="navState">
-    <MoleculesHeaderDropdown
-      v-if="isMobileNav"
-      :links="['O Projekcie', 'O nas', 'Partnerzy', 'Aktualności']"
-    />
-    <MoleculesHeaderNav :links="['O Projekcie', 'O nas']" />
+    <MoleculesHeaderDropdown v-if="isMobileNav" :links="links" />
+
+    <MoleculesHeaderNav :links="links.slice(0, 2)" />
     <AtomsHeaderLogo />
-    <MoleculesHeaderNav :links="['Partnerzy', 'Aktualności']" />
+    <MoleculesHeaderNav :links="links.slice(2, 4)" />
+
     <AtomsHeaderBars
       @toggle-navbar="toggleMobileNavbar"
       :navActive="isMobileNav"

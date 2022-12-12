@@ -1,7 +1,13 @@
 <script setup>
+const anchors = ["O Projekcie", "O nas", "Partnerzy"];
 const { link } = defineProps({
   link: {
     type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
   },
 });
 </script>
@@ -9,7 +15,7 @@ const { link } = defineProps({
 <template>
   <li>
     <mark>
-      {{ link }}
+      <NuxtLink :to="link">{{ title }}</NuxtLink>
     </mark>
   </li>
 </template>
@@ -25,6 +31,10 @@ li {
     padding-bottom: 0em;
     background-color: variables.$yellow;
     transition: all 0.1s ease-in-out;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   &:hover {

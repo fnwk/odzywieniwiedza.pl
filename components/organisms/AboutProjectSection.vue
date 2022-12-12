@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <section>
+  <section id="o_projekcie">
     <AtomsAboutProjectStain />
     <AtomsAboutProjectBull />
     <MoleculesAboutProjectText />
