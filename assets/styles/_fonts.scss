@@ -1,44 +1,44 @@
-@use 'variables';
+@use "variables";
 
 // --- style: normal ---
 
 @font-face {
-  font-family: 'butler';
+  font-family: "butler";
   src: url(/fonts/Butler_Ultra_Light.otf);
   font-weight: variables.$thin;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'butler';
+  font-family: "butler";
   src: url(/fonts/Butler_Light.otf);
   font-weight: variables.$light;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'butler';
+  font-family: "butler";
   src: url(/fonts/Butler_Regular.otf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'butler';
+  font-family: "butler";
   src: url(/fonts/Butler_Medium.otf);
   font-weight: variables.$medium;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'butler';
+  font-family: "butler";
   src: url(/fonts/Butler_Bold.otf);
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'butler';
+  font-family: "butler";
   src: url(/fonts/Butler_Extrabold.otf);
   font-weight: variables.$extra-bold;
   font-style: normal;

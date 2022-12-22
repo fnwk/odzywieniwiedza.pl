@@ -1,10 +1,10 @@
 <template>
-  <OrganismsTheHeader />
-  <OrganismsHeroSection />
-  <OrganismsWiseWordsSection />
-  <OrganismsAboutProjectSection />
-  <OrganismsBeneficiariesSection />
-  <OrganismsAboutUs />
-  <OrganismsContactSection />
-  <OrganismsTheFooter />
+  <LandingOrganismsTheHeader />
+  <LandingOrganismsHeroSection />
+  <LandingOrganismsWiseWordsSection />
+  <LandingOrganismsAboutProjectSection />
+  <LandingOrganismsBeneficiariesSection />
+  <LandingOrganismsAboutUs />
+  <LandingOrganismsContactSection />
+  <LandingOrganismsTheFooter />
 </template>

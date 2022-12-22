@@ -1,3 +1,3 @@
 <template>
-  <OrganismsSubpageInProgress />
+  <InProgressOrganismsContainer />
 </template>
