@@ -11,6 +11,8 @@ export default defineEventHandler(async (event) => {
   }
 
   try {
+    const title = body.title + " - " + body.author;
+
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
@@ -24,7 +26,7 @@ export default defineEventHandler(async (event) => {
     await transporter.sendMail({
       from: body.author,
       to: "biznes@odzywieniwiedza.pl",
-      subject: body.title,
+      subject: title,
       text: body.message,
     });
 

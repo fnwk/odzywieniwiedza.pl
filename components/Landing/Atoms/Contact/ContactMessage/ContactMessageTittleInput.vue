@@ -11,6 +11,7 @@ const titleHandler = (e) => {
       @input="titleHandler"
       type="text"
       placeholder="Temat wiadomości..."
+      required
     />
   </div>
 </template>

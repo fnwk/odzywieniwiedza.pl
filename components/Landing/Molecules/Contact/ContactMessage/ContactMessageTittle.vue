@@ -4,16 +4,11 @@ const emit = defineEmits(["clicked"]);
 const clicked = () => {
   emit("clicked");
 };
-
-const changeTitle = (inputValue) => {
-  // title.value = inputValue;
-  console.log(inputValue);
-};
 </script>
 <template>
   <div class="title">
     <LandingAtomsContactMessageTittleIcons />
-    <LandingAtomsContactMessageTittleInput @title="changeTitle" />
+    <LandingAtomsContactMessageTittleInput />
     <LandingAtomsContactMessageTittleSend @clicked="clicked" />
   </div>
 </template>

@@ -1,5 +1,13 @@
+<script setup>
+const changeAuthor = inject("changeAuthor");
+
+const AuthorHandler = (e) => {
+  changeAuthor(e.target.value);
+};
+</script>
+
 <template>
-  <input type="text" />
+  <input type="email" @input="AuthorHandler" required />
 </template>
 
 <style lang="scss" scoped>

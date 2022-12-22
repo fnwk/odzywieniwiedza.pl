@@ -1,5 +1,9 @@
+<script setup>
+const sendMail = inject("sendMail");
+</script>
+
 <template>
-  <button type="submit">Wyślij</button>
+  <button type="button" @click="sendMail">Wyślij</button>
 </template>
 
 <style lang="scss" scoped>
