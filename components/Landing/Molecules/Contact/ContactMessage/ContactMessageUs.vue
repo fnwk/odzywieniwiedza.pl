@@ -51,6 +51,10 @@ const sendMail = async () => {
       }),
     });
 
+    title.value = "";
+    message.value = "";
+    author.value = "";
+
     isClicked.value = false;
   }
 };

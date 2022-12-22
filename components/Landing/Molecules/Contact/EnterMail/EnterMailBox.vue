@@ -25,11 +25,15 @@
     flex-direction: column;
     justify-content: space-around;
     top: 30%;
-    width: 70%;
+    width: 90%;
     height: 30%;
     background-color: white;
     border-radius: 8px;
     filter: drop-shadow(-10px 10px 0px #353535);
+
+    @media (min-width: 900px) {
+      width: 45%;
+    }
   }
 }
 </style>
