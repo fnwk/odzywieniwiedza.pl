@@ -1,7 +1,11 @@
 <template>
   <footer>
-    <div></div>
     <LandingAtomsFooterMonke />
+    <div class="container">
+      <LandingMoleculesFooterSocialMedia />
+      <!-- <LandingMoleculesFooter... /> -->
+      <LandingMoleculesFooterContact />
+    </div>
   </footer>
 </template>
 
@@ -9,16 +13,17 @@
 footer {
   position: relative;
 
-  div {
+  .container {
     display: flex;
+    flex-direction: row;
     width: 101%;
-    height: 200px;
     margin-top: 300px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border: 5px solid variables.$black;
     background: variables.$yellow;
     transform: translateX(-0.5%);
+    overflow: hidden;
   }
 }
 </style>

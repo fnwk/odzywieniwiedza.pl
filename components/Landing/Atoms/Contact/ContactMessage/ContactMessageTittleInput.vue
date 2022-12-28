@@ -1,14 +1,10 @@
 <script setup>
-const changeTitle = inject("changeTitle");
-
-const titleHandler = (e) => {
-  changeTitle(e.target.value);
-};
+const title = inject("title");
 </script>
 <template>
   <div>
     <input
-      @input="titleHandler"
+      v-model="title"
       type="text"
       placeholder="Temat wiadomości..."
       required

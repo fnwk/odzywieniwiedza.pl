@@ -1,6 +1,8 @@
 <script setup>
 const changeMessage = inject("changeMessage");
 
+const message = inject("message");
+
 const messageHandler = (e) => {
   changeMessage(e.target.value);
 };
@@ -8,7 +10,7 @@ const messageHandler = (e) => {
 
 <template>
   <textarea
-    @input="messageHandler"
+    v-model="message"
     placeholder="Twoja wiadomość..."
     required
   ></textarea>

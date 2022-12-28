@@ -3,16 +3,13 @@ const error = ref("");
 provide("error", error);
 
 const title = ref("");
-const titleHandler = (value) => (title.value = value);
-provide("changeTitle", titleHandler);
+provide("title", title);
 
 const message = ref("");
-const messageHandler = (value) => (message.value = value);
-provide("changeMessage", messageHandler);
+provide("message", message);
 
 const author = ref("");
-const authorHandler = (value) => (author.value = value);
-provide("changeAuthor", authorHandler);
+provide("author", author);
 
 const isClicked = ref(false);
 const clickHandler = () => {
@@ -31,13 +28,22 @@ const checkValidity = () => {
   }
 };
 
+watch(error, (value) => {
+  console.log(value);
+  if (value === "Wpisz swój adres e-mail") {
+    setTimeout(() => {
+      error.value = "";
+    }, 1000);
+  }
+});
+
 const sendMail = async () => {
   if (author.value.trim().length <= 0) {
     error.value = "Wpisz swój adres e-mail";
     return;
   }
 
-  if (title.value !== "" && message.value !== "" && author.value !== "") {
+  if (checkValidity) {
     await useFetch("/api/sendMessage", {
       method: "POST",
       body: JSON.stringify({
@@ -64,7 +70,7 @@ provide("sendMail", sendMail);
       v-if="error.length > 0 && isClicked"
       :error="error"
     />
-    <form>
+    <form @submit.prevent>
       <LandingMoleculesContactMessageTittle @clicked="clickHandler" />
       <LandingAtomsContactMessageTextarea />
       <LandingMoleculesContactEnterMailBox

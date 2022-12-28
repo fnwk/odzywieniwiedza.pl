@@ -3,7 +3,7 @@ const sendMail = inject("sendMail");
 </script>
 
 <template>
-  <button type="button" @click="sendMail">Wyślij</button>
+  <button type="submit" @click="sendMail">Wyślij</button>
 </template>
 
 <style lang="scss" scoped>

@@ -1,9 +1,9 @@
 <script setup>
 const error = inject("error");
-const submit = inject("submit");
+const close = inject("submit");
 
 const closeError = () => {
-  submit();
+  close();
 };
 </script>
 

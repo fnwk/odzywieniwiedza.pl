@@ -1,13 +1,9 @@
 <script setup>
-const changeAuthor = inject("changeAuthor");
-
-const AuthorHandler = (e) => {
-  changeAuthor(e.target.value);
-};
+const author = inject("author");
 </script>
 
 <template>
-  <input type="email" @input="AuthorHandler" required />
+  <input type="email" required v-model="author" />
 </template>
 
 <style lang="scss" scoped>
