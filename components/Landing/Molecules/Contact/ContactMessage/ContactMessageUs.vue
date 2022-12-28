@@ -15,10 +15,13 @@ const authorHandler = (value) => (author.value = value);
 provide("changeAuthor", authorHandler);
 
 const isClicked = ref(false);
-const clicked = () => (isClicked.value = !isClicked.value);
-provide("submit", clicked);
+const clickHandler = () => {
+  checkValidity();
+  isClicked.value = !isClicked.value;
+};
+provide("submit", clickHandler);
 
-const isValid = () => {
+const checkValidity = () => {
   if (title.value.trim().length <= 0) {
     error.value = "Wpisz temat wiadomości";
     return false;
@@ -28,12 +31,6 @@ const isValid = () => {
   }
 };
 
-watch(isClicked, (value) => {
-  if (value) {
-    isValid();
-  }
-});
-
 const sendMail = async () => {
   if (author.value.trim().length <= 0) {
     error.value = "Wpisz swój adres e-mail";
@@ -41,7 +38,6 @@ const sendMail = async () => {
   }
 
   if (title.value !== "" && message.value !== "" && author.value !== "") {
-    console.log("test1");
     await useFetch("/api/sendMessage", {
       method: "POST",
       body: JSON.stringify({
@@ -58,16 +54,22 @@ const sendMail = async () => {
     isClicked.value = false;
   }
 };
+
 provide("sendMail", sendMail);
 </script>
 <template>
   <div class="message">
     <LandingAtomsContactMessageHeader />
-    <LazyLandingAtomsUIError v-if="error && isClicked" :error="error" />
+    <LazyLandingAtomsUIError
+      v-if="error.length > 0 && isClicked"
+      :error="error"
+    />
     <form>
-      <LandingMoleculesContactMessageTittle @clicked="clicked" />
+      <LandingMoleculesContactMessageTittle @clicked="clickHandler" />
       <LandingAtomsContactMessageTextarea />
-      <LandingMoleculesContactEnterMailBox v-if="isClicked && isValid" />
+      <LandingMoleculesContactEnterMailBox
+        v-if="error.length === 0 && isClicked"
+      />
     </form>
   </div>
 </template>

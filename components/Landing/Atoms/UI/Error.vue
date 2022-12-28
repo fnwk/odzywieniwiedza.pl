@@ -18,14 +18,16 @@ const closeError = () => {
 
 <style lang="scss" scoped>
 .box {
+  display: none;
   display: flex;
   position: fixed;
   width: 100vw;
   height: 100vh;
   left: 0;
   top: 0;
+  z-index: 10000;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+
   overflow: hidden;
   justify-content: center;
 
@@ -33,15 +35,17 @@ const closeError = () => {
     position: absolute;
     top: 30%;
     width: 40vmax;
-    height: 15vmax;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     background-color: white;
     border-radius: 8px;
     filter: drop-shadow(-10px 10px 0px #353535);
 
     img {
+      position: absolute;
+      top: 10px;
+      right: 5px;
       margin-left: auto;
       margin-right: 10px;
       width: 32px;
@@ -53,7 +57,7 @@ const closeError = () => {
       font-size: 1.5rem;
       font-weight: 600;
       color: #f44336;
-      padding-bottom: 30px;
+      padding-block: 10vmin;
     }
   }
 }
