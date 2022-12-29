@@ -1,9 +1,11 @@
 <script setup>
-defineProps({ iconName: String });
+defineProps({ iconName: String, link: String });
 </script>
 
 <template>
-  <img :src="'/images/footer/' + iconName + '.svg'" />
+  <NuxtLink :to="link">
+    <img :src="'/images/footer/' + iconName + '.svg'" />
+  </NuxtLink>
 </template>
 
 <style lang="scss" scoped>

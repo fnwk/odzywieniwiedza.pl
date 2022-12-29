@@ -1,11 +1,5 @@
 <script setup>
-const changeMessage = inject("changeMessage");
-
 const message = inject("message");
-
-const messageHandler = (e) => {
-  changeMessage(e.target.value);
-};
 </script>
 
 <template>

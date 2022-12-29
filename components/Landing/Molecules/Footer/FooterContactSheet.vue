@@ -12,7 +12,7 @@
 </template>
 <style lang="scss" scoped>
 .sheet {
-  width: 65%;
+  width: 85%;
   height: 100%;
   padding: 5% 10%;
   background-color: #fffefa;
@@ -27,5 +27,9 @@
   margin: auto;
   filter: drop-shadow(-10px 10px 0px #000000);
   transform: translateY(2%);
+
+  @media (min-width: 900px) {
+    width: 65%;
+  }
 }
 </style>
