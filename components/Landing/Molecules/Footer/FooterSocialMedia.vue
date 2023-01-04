@@ -8,7 +8,10 @@
       iconName="Instagram"
       link="https://www.instagram.com/odzywieniwiedza/"
     />
-    <LandingAtomsFooterIcon iconName="Twitter" link="" />
+    <LandingAtomsFooterIcon
+      iconName="Twitter"
+      link="https://twitter.com/odzywieniwiedza"
+    />
   </div>
 </template>
 

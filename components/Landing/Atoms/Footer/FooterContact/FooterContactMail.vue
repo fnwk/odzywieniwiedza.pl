@@ -3,7 +3,5 @@ defineProps({ text: String });
 </script>
 
 <template>
-  <p>{{ text }}</p>
+  <NuxtLink :to="'mailto:' + text">{{ text }}</NuxtLink>
 </template>
-
-<style lang="scss"></style>

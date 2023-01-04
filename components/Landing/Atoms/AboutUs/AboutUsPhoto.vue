@@ -1,5 +1,5 @@
 <script setup>
-const emit = defineEmits(['which-photo']);
+const emit = defineEmits(["which-photo"]);
 const props = defineProps({
   photoNumber: {
     type: Number,
@@ -13,7 +13,7 @@ const props = defineProps({
 
 const whichPhoto = () => {
   if (props.isBigPhoto === true) return;
-  emit('which-photo', props.photoNumber);
+  emit("which-photo", props.photoNumber);
 };
 </script>
 <template>
@@ -48,8 +48,8 @@ const whichPhoto = () => {
 
   &.big-photo {
     margin-bottom: 70px;
-    width: 100%;
-    padding-left: 5vmax;
+    width: 95%;
+    margin-right: 5vmax;
   }
 
   @media (min-width: 900px) {

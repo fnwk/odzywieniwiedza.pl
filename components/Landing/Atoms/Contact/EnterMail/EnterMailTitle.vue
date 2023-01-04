@@ -1,5 +1,5 @@
 <template>
-  <h1>Potrzebujemy twojego maila zeby moc do ciebie odpisać</h1>
+  <h1>Potrzebujemy Twojego maila żeby móc do Ciebie odpisać!</h1>
 </template>
 <style lang="scss" scoped>
 h1 {
